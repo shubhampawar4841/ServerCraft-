@@ -1,13 +1,15 @@
 {
   "name": "servercraft",
   "version": "1.0.0",
-  "description": "",
+  "description": "A server-side application for managing user data and media uploads.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "format": "prettier --write ."
   },
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -19,8 +21,13 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.2",
     "mongoose-aggregate-paginate-v2": "^1.1.2",
-    "multer": "^1.4.5-lts.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.7",
     "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
