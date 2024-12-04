@@ -14,11 +14,7 @@ app.use(cors({
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 
-// Serve static files from the "public" directory
-app.use(express.static("public"));
 
-// Cookie parsing middleware
-app.use(cookieParser());
 
 // Define your routes
 app.use("/api/v1/users", userRouter);
