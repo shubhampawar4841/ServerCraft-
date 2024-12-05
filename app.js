@@ -1,7 +1,7 @@
 import express from 'express';  // Use import instead of require
 import cors from 'cors';        // Same for other modules
 import cookieParser from 'cookie-parser';
-import userRouter from './src/routes/user.routes';
+// import router from './src/routes/user.routes';
 const app = express();
 
 // Set up CORS with options from environment variables
@@ -10,7 +10,7 @@ app.use(cors({
     credentials: true
 }));
 
-// Middleware for handling JSON and URL-encoded data
+// Middleware for handling fJSON and URL-encoded data
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 
@@ -21,7 +21,7 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // Define your routes
-app.use("/api/v1/users", userRouter);
+// app.use("/api/v1/users", userRouter);
 
 // Home route to test server
 app.get('/', (req, res) => {
