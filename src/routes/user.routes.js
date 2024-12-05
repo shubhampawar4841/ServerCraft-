@@ -17,11 +17,7 @@ router.route("/signup").post(
     });
     )
 
-router.route("/signin").post(
-    res.status(201).json({
-        message:"USer succesug";
-    });
-    )
+
 
 
 
