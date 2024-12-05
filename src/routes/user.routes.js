@@ -11,4 +11,18 @@ router.route("/register").post(
     });
     )
 
+router.route("/signup").post(
+    res.status(201).json({
+        message:"USer succesug";
+    });
+    )
+
+router.route("/signin").post(
+    res.status(201).json({
+        message:"USer succesug";
+    });
+    )
+
+
+
 export default router;
