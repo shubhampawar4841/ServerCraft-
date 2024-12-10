@@ -18,6 +18,10 @@ const playlistSchema = new Schema(
         ref: "Video",
       }
     ],
+    isPublic: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
